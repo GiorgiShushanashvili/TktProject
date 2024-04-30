@@ -6,7 +6,7 @@ namespace TktProject.Domain.Entities;
 public class Tickets
 {
     public int Id { get; set; }
-    public   Price Price { get; set; }
+    public Price Price { get; set; }
     public Category Category { get; set; }
     public Entrance Entrance { get; set; }
     public Tier Tier { get; set; }
@@ -16,5 +16,6 @@ public class Tickets
     public string OwnersPersonalNumber {  get; set; }
     public string OwnersEmail { get; set; }
     public string OwnersPhoneNumber { get; set; }
+    public User User { get; set; }
     public int UserId {  get; set; }
 }

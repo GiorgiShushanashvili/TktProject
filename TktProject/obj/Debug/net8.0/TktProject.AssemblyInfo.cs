@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TktProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f8d1cbf07d79cfdad4359fc9e7d0f9d8e1d77053")]
 [assembly: System.Reflection.AssemblyProductAttribute("TktProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TktProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
