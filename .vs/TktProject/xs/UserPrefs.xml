@@ -1,0 +1,39 @@
+﻿<Properties StartupConfiguration="{459B3AC6-0741-4B78-90BE-D1AD8D7A95F5}|https">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.TktProject PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../../usr/local/share/dotnet/sdk/7.0.316/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.TargetFrameworkInference.targets">
+    <Files>
+      <File FileName="TktProject/Middleware/ExceptionMiddleware.cs" />
+      <File FileName="TktProject.Domain/Entities/User.cs" />
+      <File FileName="TktProject.Domain/Entities/Order.cs" />
+      <File FileName="TktProject.Domain/Entities/Tickets.cs" />
+      <File FileName="TktProject.Domain/ValueObjects/SeatCoordinates.cs" />
+      <File FileName="../../../../../usr/local/share/dotnet/sdk/7.0.316/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.TargetFrameworkInference.targets" Line="151" Column="5" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TktProject" expanded="True">
+            <Node name="src" expanded="True">
+              <Node name="Core" expanded="True">
+                <Node name="TktProject.App" expanded="True" />
+                <Node name="TktProject.Domain" expanded="True">
+                  <Node name="Entities" expanded="True" />
+                  <Node name="ValueObjects" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
+            <Node name="TktProject" expanded="True">
+              <Node name="Middleware" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
