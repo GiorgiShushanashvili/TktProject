@@ -1,9 +1,9 @@
 using System.Text;
-using System.Text.Json.Nodes;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Reflection;
-using Microsoft.EntityFrameworkCore.Storage.Json;
+using System.ComponentModel.DataAnnotations;
+using Newtonsoft.Json.Serialization;
 
 namespace TktProject.Middleware;
 public class ValidationMiddleware
@@ -18,7 +18,15 @@ public class ValidationMiddleware
     public async Task InvokeAsync(HttpContext httpContext)
     {
         LoadAssembly();
-
+        var validationResult=await ValidateRequest(httpContext);
+        if(string.IsNullOrEmpty(validationResult))
+        {
+            httpContext.Response.StatusCode=StatusCodes.Status400BadRequest;
+            httpContext.Request.ContentType="application/json";
+            await httpContext.Response.WriteAsync(validationResult);
+            return;
+        }
+        await _next(httpContext);
     }
 
     private async Task<string> ValidateRequest(HttpContext httpContext)
@@ -40,8 +48,42 @@ public class ValidationMiddleware
             var parameters = constructor.GetParameters();
             var parameterPropertyMapping=new Dictionary<string,string>();
             
-            
+            foreach(var parameter in parameters)
+            {
+                parameterPropertyMapping[parameter.Name.ToLower()]=parameter.Name.ToLower();
+            }
+            foreach(var property in jsonObject.Properties())
+            {
+                if(parameterPropertyMapping.ContainsKey(property.Name))
+                {
+                    var parameterName=parameterPropertyMapping[property.Name.ToLower()];
+                    var parameterType=parameters.FirstOrDefault(x=>x.Name.ToLower()==parameterName)?.ParameterType;
+                    if(parameterType!=null)
+                    {
+                        var propertyValue=Convert.ChangeType(property.Value,parameterType);
+                        objList.Add(propertyValue);
+                    }   
+                }else
+                {
+                    Console.WriteLine($"Warning: Not Found Matching Constructor Paramater{property.Name}");
+                }
+            }
+            var constructorArgs=objList.ToArray();
+            var validatorObject=Activator.CreateInstance(properties.First().PropertyType,constructorArgs);
+
+            var validateResult=validateMethod.Invoke(validatorInstance,new[] {validatorObject}) as List<ValidationResult>;
+            var errorMessages = validateResult.Select(x=>x.ErrorMessage).ToList();
+            if(validateResult !=null&&validateResult.Any())
+            {
+                var jsonSettings=new JsonSerializerSettings
+                {
+                    ContractResolver=new CamelCasePropertyNamesContractResolver()
+                };
+                var json =JsonConvert.SerializeObject(errorMessages,jsonSettings);
+                return json;
+            }
         }
+        return null;
     }
 
     private async Task<JObject> GetRequestBodyAsync(HttpRequest request)
@@ -50,7 +92,7 @@ public class ValidationMiddleware
         HttpRequestRewindExtensions.EnableBuffering(request);
         using(StreamReader reader =new StreamReader(
             request.Body,
-            Encoding.UTF32,
+            Encoding.UTF8,
             detectEncodingFromByteOrderMarks:false,
             leaveOpen:true
         ))

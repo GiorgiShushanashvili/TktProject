@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TktProject.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c84387869debae53db1522c0087dc84a97a5cde5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c1e44b9eaf59e13c80d0b6e5e9351f40b4d4b40a")]
 [assembly: System.Reflection.AssemblyProductAttribute("TktProject.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TktProject.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
