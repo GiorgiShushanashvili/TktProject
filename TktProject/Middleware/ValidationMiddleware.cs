@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Reflection;
 using System.ComponentModel.DataAnnotations;
+using FluentValidation.Results;
 using Newtonsoft.Json.Serialization;
 
 namespace TktProject.Middleware;
@@ -71,7 +72,7 @@ public class ValidationMiddleware
             var constructorArgs=objList.ToArray();
             var validatorObject=Activator.CreateInstance(properties.First().PropertyType,constructorArgs);
 
-            var validateResult=validateMethod.Invoke(validatorInstance,new[] {validatorObject}) as List<ValidationResult>;
+            var validateResult=validateMethod.Invoke(validatorInstance,new[] {validatorObject}) as List<ValidationFailure>;
             var errorMessages = validateResult.Select(x=>x.ErrorMessage).ToList();
             if(validateResult !=null&&validateResult.Any())
             {

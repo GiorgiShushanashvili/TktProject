@@ -1,7 +1,5 @@
 ﻿using System.Reflection;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
-using Tkt.Domain.Entities;
 using TktProject.Domain.Entities;
 using TktProject.Infrastructure.Contracts;
 

@@ -5,10 +5,12 @@ namespace TktProject.Middleware;
 public class ExceptionMiddleware
 {
     private readonly RequestDelegate _next;
+
     public ExceptionMiddleware(RequestDelegate next)
     {
         _next = next;
     }
+
     public async Task InvokeAsync(HttpContext context)
     {
         try
@@ -21,12 +23,13 @@ public class ExceptionMiddleware
         }
 
     }
-    
-    private async Task HandleExceptionAsync(HttpContext context,Exception ex)
+
+    private async Task HandleExceptionAsync(HttpContext context, Exception ex)
     {
-        HttpStatusCode statuscode=HttpStatusCode.InternalServerError;
+        HttpStatusCode statuscode = HttpStatusCode.InternalServerError;
         switch (ex)
         {
-            
+
         }
+    }
 }
