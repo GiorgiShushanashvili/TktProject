@@ -13,11 +13,13 @@ public class LoginCommandHandler:IRequestHandler<LoginCommand,string>
 {
     private IUnitOfWork<ITktDbContext> _unitOfWork;
     private readonly IPasswordManagement _passwordManagement;
+    private readonly ITokenManagement _tokenManagement;
 
-    public LoginCommandHandler(IUnitOfWork<ITktDbContext> unitOfWork,IPasswordManagement passwordManagement)
+    public LoginCommandHandler(IUnitOfWork<ITktDbContext> unitOfWork,IPasswordManagement passwordManagement,ITokenManagement tokenManagement)
     {
         _unitOfWork = unitOfWork;
         _passwordManagement = passwordManagement;
+        _tokenManagement = tokenManagement;
     }
 
     public async Task<string> Handle(LoginCommand request, CancellationToken cancellationToken)
@@ -31,6 +33,7 @@ public class LoginCommandHandler:IRequestHandler<LoginCommand,string>
         var checkPassword = _passwordManagement.IsValidPasswordHash(userInfo.PasswordHash, passwordHash);
         if (!checkPassword)
             throw new IncorrectPasswordException();
-        var 
+        var token =await _tokenManagement.CreateToken(userInfo.Id, userRole.ToString());
+        return token;
     }
 }
