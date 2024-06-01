@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TktProject.Persistance")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ad300b1b1b4d6c6266438478d5585c190b6580e2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+13e2c9719e6f063558736dff9dcd2641ca9e353a")]
 [assembly: System.Reflection.AssemblyProductAttribute("TktProject.Persistance")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TktProject.Persistance")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

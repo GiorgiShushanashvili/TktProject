@@ -11,11 +11,11 @@ public class Tickets
     public Entrance Entrance { get; set; }
     public Tier Tier { get; set; }
     public SeatCoordinates SeatCoordinates { get; set; }
-    public string OwnersFirstName {  get; set; }
-    public string OwnersLastName { get; set; }
-    public string OwnersPersonalNumber {  get; set; }
-    public string OwnersEmail { get; set; }
-    public string OwnersPhoneNumber { get; set; }
-    public User User { get; set; }
-    public int UserId {  get; set; }
+    public string? OwnersFirstName {  get; set; }
+    public string? OwnersLastName { get; set; }
+    public string? OwnersPersonalNumber {  get; set; }
+    public string? OwnersEmail { get; set; }
+    public string? OwnersPhoneNumber { get; set; }
+    public User? User { get; set; }
+    public int? UserId {  get; set; }
 }

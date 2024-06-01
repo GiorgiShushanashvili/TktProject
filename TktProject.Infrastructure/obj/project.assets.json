@@ -1061,34 +1061,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Giorgi\\.nuget\\packages\\": {}
+    "/Users/giorgishushanashvili/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Giorgi\\Desktop\\WorkingConsoles\\TktProject\\TktProject.Infrastructure\\TktProject.Infrastructure.csproj",
+      "projectUniqueName": "/Users/giorgishushanashvili/Desktop/Apis/TktProject/TktProject.Infrastructure/TktProject.Infrastructure.csproj",
       "projectName": "TktProject.Infrastructure",
-      "projectPath": "C:\\Users\\Giorgi\\Desktop\\WorkingConsoles\\TktProject\\TktProject.Infrastructure\\TktProject.Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\Giorgi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Giorgi\\Desktop\\WorkingConsoles\\TktProject\\TktProject.Infrastructure\\obj\\",
+      "projectPath": "/Users/giorgishushanashvili/Desktop/Apis/TktProject/TktProject.Infrastructure/TktProject.Infrastructure.csproj",
+      "packagesPath": "/Users/giorgishushanashvili/.nuget/packages/",
+      "outputPath": "/Users/giorgishushanashvili/Desktop/Apis/TktProject/TktProject.Infrastructure/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Giorgi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/giorgishushanashvili/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Giorgi\\Desktop\\WorkingConsoles\\TktProject\\TktProject.Domain\\TktProject.Domain.csproj": {
-              "projectPath": "C:\\Users\\Giorgi\\Desktop\\WorkingConsoles\\TktProject\\TktProject.Domain\\TktProject.Domain.csproj"
+            "/Users/giorgishushanashvili/Desktop/Apis/TktProject/TktProject.Domain/TktProject.Domain.csproj": {
+              "projectPath": "/Users/giorgishushanashvili/Desktop/Apis/TktProject/TktProject.Domain/TktProject.Domain.csproj"
             }
           }
         }
@@ -1097,6 +1095,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -1140,7 +1143,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
