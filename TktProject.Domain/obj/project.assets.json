@@ -8,24 +8,26 @@
     "net8.0": []
   },
   "packageFolders": {
-    "/Users/giorgishushanashvili/.nuget/packages/": {}
+    "C:\\Users\\Giorgi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/giorgishushanashvili/Desktop/Apis/TktProject/TktProject.Domain/TktProject.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Giorgi\\Desktop\\WorkingConsoles\\TktProject\\TktProject.Domain\\TktProject.Domain.csproj",
       "projectName": "TktProject.Domain",
-      "projectPath": "/Users/giorgishushanashvili/Desktop/Apis/TktProject/TktProject.Domain/TktProject.Domain.csproj",
-      "packagesPath": "/Users/giorgishushanashvili/.nuget/packages/",
-      "outputPath": "/Users/giorgishushanashvili/Desktop/Apis/TktProject/TktProject.Domain/obj/",
+      "projectPath": "C:\\Users\\Giorgi\\Desktop\\WorkingConsoles\\TktProject\\TktProject.Domain\\TktProject.Domain.csproj",
+      "packagesPath": "C:\\Users\\Giorgi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Giorgi\\Desktop\\WorkingConsoles\\TktProject\\TktProject.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/giorgishushanashvili/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Giorgi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -38,11 +40,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -64,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -16,6 +16,8 @@ public class Tickets
     public string? OwnersPersonalNumber {  get; set; }
     public string? OwnersEmail { get; set; }
     public string? OwnersPhoneNumber { get; set; }
-    public User? User { get; set; }
+    public Order? Order { get; set; }
+    public int OrderId { get; set; }
     public int? UserId {  get; set; }
+    public bool IsEnabled { get; set; }
 }
